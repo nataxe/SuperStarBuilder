@@ -27,21 +27,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func slider2changed(_ sender: UISlider) {
-        //star.changeLength(to: Double(sender.value))   //50, 5, 300
+        star.changeLength(to: Double(sender.value))   //50, 5, 300
         
-        /*if sender.value == 1 {                        //1, 0, 1
-            star.changeColor(to: UIColor.white)
-        } else {
-            star.changeColor(to: UIColor(hue: CGFloat(sender.value), saturation: 0.8, brightness: 1, alpha: 1))
-        }*/
         
-        star.changeRotation(to: Double(sender.value))   //0, -360, 360
 
     }
     @IBAction func slider3changed(_ sender: UISlider) {
-        star.changeTjockis(to: Double(sender.value / sender.maximumValue))
-
+        star.changeTjockis(to: Double(sender.value / sender.maximumValue)) //5 1 10
     }
+    
+    @IBAction func slider4changed(_ sender: UISlider) {
+        star.changeRotation(to: Double(sender.value))   //0, -360, 360
+    }
+    
+    @IBAction func slider5changed(_ sender: UISlider) {
+        if sender.value == 1 {                        //1, 0, 1
+            star.changeColor(to: UIColor.white)
+        } else {
+            star.changeColor(to: UIColor(hue: CGFloat(sender.value), saturation: 0.8, brightness: 1, alpha: 1))
+        }
+    }
+    
+    
     @IBAction func save(_ sender: UIButton) {
         star.saveStar()
     }

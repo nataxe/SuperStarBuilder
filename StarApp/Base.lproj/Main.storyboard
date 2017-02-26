@@ -22,37 +22,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGd-oC-6e1" customClass="StarView" customModule="StarApp" customModuleProvider="target">
-                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <rect key="frame" x="37" y="74" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Hkf-Xe-1V0"/>
-                                    <constraint firstAttribute="width" constant="300" id="m5J-H2-m4L"/>
+                                    <constraint firstAttribute="width" constant="300" id="bp6-8B-eXc"/>
                                 </constraints>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="8lW-QN-LWM">
-                                <rect key="frame" x="35" y="511" width="304" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="8lW-QN-LWM">
+                                <rect key="frame" x="35" y="390" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0wR-WH-zPS"/>
+                                </constraints>
                                 <connections>
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fxY-J8-hVv"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-360" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-MO-D11">
-                                <rect key="frame" x="35" y="576" width="304" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="5" maxValue="245" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-MO-D11">
+                                <rect key="frame" x="35" y="434" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="jYf-fY-Sc1"/>
+                                </constraints>
                                 <connections>
                                     <action selector="slider2changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="eam-XR-S4F"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qea-A7-u7Q">
-                                <rect key="frame" x="35" y="617" width="304" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qea-A7-u7Q">
+                                <rect key="frame" x="35" y="483" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2ps-FA-47r"/>
+                                </constraints>
                                 <connections>
                                     <action selector="slider3changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="ltJ-98-5ph"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-DL-sb9">
-                                <rect key="frame" x="164" y="91" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-360" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="qpa-na-epx">
+                                <rect key="frame" x="35" y="530" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Eaj-ra-i5Q"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider4changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Vk-1z-nZP"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-bw-8n9">
+                                <rect key="frame" x="35" y="576" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2z7-uA-MN1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider5changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="rBS-0T-PLc"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-DL-sb9" userLabel="Save">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.24666240376684068" blue="0.92631086044433308" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jr-Uk-Wib"/>
                                 </connections>
@@ -60,8 +86,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gGd-oC-6e1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jsx-ca-JpV"/>
-                            <constraint firstItem="gGd-oC-6e1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O1c-fe-vKv"/>
+                            <constraint firstItem="LDk-MO-D11" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="414" id="1Tp-Wu-TFE"/>
+                            <constraint firstItem="7Sq-bw-8n9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="556" id="8NR-L3-amC"/>
+                            <constraint firstItem="1Pp-DL-sb9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BD7-yF-vjg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Pp-DL-sb9" secondAttribute="bottom" constant="20" id="HsA-AI-dfh"/>
+                            <constraint firstItem="LDk-MO-D11" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KNR-hB-9us"/>
+                            <constraint firstItem="7Sq-bw-8n9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LGN-jT-M8Z"/>
+                            <constraint firstItem="gGd-oC-6e1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="TSb-Tk-eZM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gGd-oC-6e1" secondAttribute="bottom" constant="293" id="f9c-WN-cfG"/>
+                            <constraint firstItem="qea-A7-u7Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="463" id="lPr-Ve-dAt"/>
+                            <constraint firstItem="8lW-QN-LWM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvG-Ry-kqM"/>
+                            <constraint firstItem="gGd-oC-6e1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o3A-0b-sgk"/>
+                            <constraint firstItem="qpa-na-epx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="510" id="p1g-sJ-sJW"/>
+                            <constraint firstItem="qea-A7-u7Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uzk-hr-iqw"/>
+                            <constraint firstItem="8lW-QN-LWM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="370" id="w4d-sX-Yjj"/>
+                            <constraint firstItem="qpa-na-epx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zGI-xY-moJ"/>
                         </constraints>
                     </view>
                     <connections>
