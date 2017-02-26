@@ -25,6 +25,7 @@
                                 <rect key="frame" x="37" y="74" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="bp6-8B-eXc"/>
+                                    <constraint firstAttribute="height" constant="300" id="sc5-6E-c2u"/>
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="8lW-QN-LWM">
@@ -93,7 +94,6 @@
                             <constraint firstItem="LDk-MO-D11" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KNR-hB-9us"/>
                             <constraint firstItem="7Sq-bw-8n9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LGN-jT-M8Z"/>
                             <constraint firstItem="gGd-oC-6e1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="TSb-Tk-eZM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gGd-oC-6e1" secondAttribute="bottom" constant="293" id="f9c-WN-cfG"/>
                             <constraint firstItem="qea-A7-u7Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="463" id="lPr-Ve-dAt"/>
                             <constraint firstItem="8lW-QN-LWM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvG-Ry-kqM"/>
                             <constraint firstItem="gGd-oC-6e1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o3A-0b-sgk"/>

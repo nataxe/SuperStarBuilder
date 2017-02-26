@@ -56,7 +56,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func save(_ sender: UIButton) {
-        star.saveStar()
+        let starImage = star.createImage()
+        UIImageWriteToSavedPhotosAlbum(starImage, self, nil, nil)
+
     }
 }
 
