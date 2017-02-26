@@ -9,12 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var Slider1: UISlider!
+    @IBOutlet weak var slider2: UISlider!
+    @IBOutlet weak var slider3: UISlider!
+    @IBOutlet weak var slider4: UISlider!
+    @IBOutlet weak var slider5: UISlider!
+    
+    
 
+    func initSliders(){
+        let image: UIImage = UIImage(named: "starIcon")!
+        Slider1.setThumbImage(image, for: UIControlState.normal)
+        slider2.setThumbImage(image, for: UIControlState.normal)
+        slider3.setThumbImage(image, for: UIControlState.normal)
+        slider4.setThumbImage(image, for: UIControlState.normal)
+        slider5.setThumbImage(image, for: UIControlState.normal)
+    }
+    
     @IBOutlet weak var star: StarView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         star.setup()
+        initSliders()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +45,6 @@ class ViewController: UIViewController {
 
     @IBAction func slider2changed(_ sender: UISlider) {
         star.changeLength(to: Double(sender.value))   //50, 5, 300
-        
-        
 
     }
     @IBAction func slider3changed(_ sender: UISlider) {

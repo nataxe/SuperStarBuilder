@@ -104,6 +104,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Slider1" destination="8lW-QN-LWM" id="9lH-rx-f1D"/>
+                        <outlet property="slider2" destination="LDk-MO-D11" id="H86-hy-uT7"/>
+                        <outlet property="slider3" destination="qea-A7-u7Q" id="9ta-qb-n01"/>
+                        <outlet property="slider4" destination="qpa-na-epx" id="FO6-6Q-aaE"/>
+                        <outlet property="slider5" destination="7Sq-bw-8n9" id="MrQ-1f-IFY"/>
                         <outlet property="star" destination="gGd-oC-6e1" id="nfA-gX-PrL"/>
                     </connections>
                 </viewController>
