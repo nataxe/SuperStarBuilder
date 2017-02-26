@@ -41,11 +41,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func slider5changed(_ sender: UISlider) {
-        if sender.value == 1 {                        //1, 0, 1
+        /*if sender.value == 1 {                        //1, 0, 1
             star.changeColor(to: UIColor.white)
         } else {
             star.changeColor(to: UIColor(hue: CGFloat(sender.value), saturation: 0.8, brightness: 1, alpha: 1))
+        }*/
+        if sender.value < 0 {                           //0, -1, 1
+            star.changeSqueeze(to: (Double(sender.value + 2) / 2.0))
+        } else {
+            star.changeSqueeze(to: Double(sender.value + 1))
         }
+        
     }
     
     

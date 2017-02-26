@@ -63,7 +63,7 @@
                                     <action selector="slider4changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Vk-1z-nZP"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-bw-8n9">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-bw-8n9">
                                 <rect key="frame" x="35" y="576" width="304" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="2z7-uA-MN1"/>

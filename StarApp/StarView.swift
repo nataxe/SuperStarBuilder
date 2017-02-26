@@ -16,6 +16,7 @@ class StarView: UIView {
     var points = 8
     var tjockis = 1.0/3.0
     var rotation = 270.0
+    var squeeze = 1.0
     
     var shapeLayer = CAShapeLayer()
     
@@ -25,12 +26,12 @@ class StarView: UIView {
         var values = [CGPoint?](repeating: nil, count: 2 * points)
         
         for i in stride(from: 0, to: 2*points, by: 2) {
-            let xVal = xcenter + length * cos((rotation + Double(i * 180/points)) * M_PI / 180)
-            let yVal = ycenter + length * sin((rotation + Double(i * 180/points)) * M_PI / 180)
+            let xVal = xcenter + squeeze * length * cos((rotation + Double(i * 180/points)) * M_PI / 180)
+            let yVal = ycenter + (1 / squeeze) * length * sin((rotation + Double(i * 180/points)) * M_PI / 180)
             values[i] = CGPoint(x: xVal, y: yVal)
             
-            let xVal2 = xcenter + length * tjockis * cos((rotation + Double((i + 1) * 180/points)) * M_PI / 180)
-            let yVal2 = ycenter + length * tjockis * sin((rotation + Double((i + 1 ) * 180/points)) * M_PI / 180)
+            let xVal2 = xcenter + squeeze * length * tjockis * cos((rotation + Double((i + 1) * 180/points)) * M_PI / 180)
+            let yVal2 = ycenter + (1 / squeeze) * length * tjockis * sin((rotation + Double((i + 1 ) * 180/points)) * M_PI / 180)
             values[i+1] = CGPoint(x: xVal2, y: yVal2)
             
             
@@ -56,6 +57,7 @@ class StarView: UIView {
         length = Double(bounds.height * 0.45)
         points = 8
         tjockis = 1.0/3.0
+        squeeze = 1.0
         
         let starPath = makeStarPath(length: length, points: points)
         
@@ -89,6 +91,11 @@ class StarView: UIView {
     
     func changeRotation(to: Double){
         rotation = to / Double(points) - 90.0
+        shapeLayer.path = makeStarPath(length: length, points: points).cgPath
+    }
+    
+    func changeSqueeze(to: Double){
+        squeeze = to
         shapeLayer.path = makeStarPath(length: length, points: points).cgPath
     }
     
