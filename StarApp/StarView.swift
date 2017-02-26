@@ -94,12 +94,14 @@ class StarView: UIView {
     
     
     
-    func saveStar(){
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0)
+    func createImage() -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
         self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(image!, self, nil, nil)
+        let imageData = UIImagePNGRepresentation(image!)
+        let pngImage = UIImage(data: imageData!)
+        return pngImage!
         
     }
     
